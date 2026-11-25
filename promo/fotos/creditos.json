@@ -1,0 +1,26 @@
+[
+ {
+  "archivo": "promo/fotos/foto1.jpg",
+  "ancho": 1280,
+  "alto": 720,
+  "fuente": "El Colombiano",
+  "titulo": "Hizo de la tierra y la miel el trabajo de las familias en Caucasia",
+  "url": "https://www.elcolombiano.com/grandes-historias-mujeres-empresarias-bajo-cauca/corcover-tierra-miel-familias-caucasia-BL43953121"
+ },
+ {
+  "archivo": "promo/fotos/sat-caucasia.jpg",
+  "fuente": "Esri World Imagery (satélite)"
+ },
+ {
+  "archivo": "promo/fotos/sat-centro.jpg",
+  "fuente": "Esri World Imagery (satélite)"
+ },
+ {
+  "archivo": "promo/fotos/sat-rio.jpg",
+  "fuente": "Esri World Imagery (satélite)"
+ },
+ {
+  "archivo": "promo/fotos/sat-region.jpg",
+  "fuente": "Esri World Imagery (satélite)"
+ }
+]
