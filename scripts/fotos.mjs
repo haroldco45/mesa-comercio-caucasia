@@ -38,11 +38,30 @@ for (const it of n.items) {
   vistas.add(img);
   await guardar(img, { fuente: it.fuente, titulo: it.titulo, url: it.url });
 }
+// 1b) Historias empresariales del Bajo Cauca (El Colombiano) — fotos reales y optimistas
+const SERIES = ['https://www.elcolombiano.com/grandes-historias-empresariales-bajo-cauca', 'https://www.elcolombiano.com/grandes-historias-mujeres-empresarias-bajo-cauca'];
+const ARTS = new Set(['https://www.elcolombiano.com/grandes-historias-empresariales-bajo-cauca/hace-30-anos-la-hacienda-provee-de-materiales-a-caucasia-HA31750025']);
+for (const s of SERIES) {
+  try {
+    const html = await (await traer(s, 15000)).text();
+    for (const m of html.matchAll(/href=["']((?:https:\/\/www\.elcolombiano\.com)?\/grandes-historias-[a-z-]*bajo-cauca\/[a-z0-9-]+-[A-Z]{2}\d+)["']/g)) ARTS.add(new URL(m[1], 'https://www.elcolombiano.com').href);
+  } catch (e) { console.log('serie falló', s, e.message); }
+}
+console.log('artículos de la serie:', ARTS.size);
+for (const a of [...ARTS].slice(0, 14)) {
+  if (lista.length >= 16) break;
+  const img = await og(a);
+  if (!img || vistas.has(img)) continue;
+  vistas.add(img);
+  const t = a.split('/').pop().replace(/-[A-Z]{2}\d+$/, '').replace(/-/g, ' ');
+  await guardar(img, { fuente: 'El Colombiano', titulo: t, url: a, serie: true });
+}
 // 2) Wikimedia Commons: fotos libres de Caucasia
 for (const q of ['Caucasia Antioquia', 'Caucasia Colombia río Cauca', 'Puente Carlos Lleras Restrepo Caucasia']) {
   try {
     const api = `https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=12&gsrsearch=${encodeURIComponent(q)}&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=1800`;
     const j = await (await traer(api)).json();
+    console.log('commons', q, Object.keys(j.query?.pages || {}).length);
     for (const p of Object.values(j.query?.pages || {})) {
       const ii = p.imageinfo?.[0]; if (!ii || !/\.jpe?g$/i.test(ii.url) || vistas.has(ii.url)) continue;
       if (!/caucasia/i.test(p.title + (ii.extmetadata?.ImageDescription?.value || ''))) continue;
