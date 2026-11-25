@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mesa del Comercio al Día · Caucasia — que no sean solo palabras</title>
+<meta name="description" content="Seguimiento ciudadano a la mesa de trabajo de la Alcaldía de Caucasia con los comerciantes: espacio público, obras en la vía, alumbrado e impuestos. Compromisos, avances, noticias que se actualizan solas y derecho de petición.">
+<meta name="theme-color" content="#0a1628">
+<link rel="canonical" href="https://mesa-comercio-caucasia.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vibras Positivas HM">
+<meta property="og:title" content="Mesa del Comercio al Día · Caucasia — que no sean solo palabras">
+<meta property="og:description" content="La Alcaldía se sentó con más de 20 comerciantes. Aquí seguimos cada compromiso: espacio público, obras, alumbrado e impuestos. Noticias cada 30 minutos y derecho de petición a todas las entidades.">
+<meta property="og:url" content="https://mesa-comercio-caucasia.netlify.app/">
+<meta property="og:image" content="https://mesa-comercio-caucasia.netlify.app/portada.jpg?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_CO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mesa del Comercio al Día · Caucasia">
+<meta name="twitter:description" content="Que no sean solo palabras: seguimiento a los compromisos de la Alcaldía de Caucasia con el comercio.">
+<meta name="twitter:image" content="https://mesa-comercio-caucasia.netlify.app/portada.jpg?v=1">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+
+<header class="barra">
+  <a class="marca" href="#inicio"><span class="marca-mc">MC</span><span>Mesa del <b>Comercio</b></span></a>
+  <nav class="menu">
+    <a href="#hoy" data-i18n="nav_hoy">Hoy</a>
+    <a href="#compromisos" data-i18n="nav_comp">Compromisos</a>
+    <a href="#obras" data-i18n="nav_obras">Obras</a>
+    <a href="#voz" data-i18n="nav_voz">Su voz</a>
+    <a href="#peticion" data-i18n="nav_peticion">Petición</a>
+  </nav>
+  <div class="acciones">
+    <button class="btn-lang" id="btnLang" aria-label="Cambiar idioma">EN</button>
+    <button class="btn-act" id="btnActualizar"><span class="giro"></span><span data-i18n="actualizar">Actualizar</span></button>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-fotos" id="heroFotos"><div class="on sat"></div></div>
+  <div class="hero-velo"></div>
+  <div class="hero-in">
+    <div class="pildora"><i></i><span data-i18n="hero_pildora">Caucasia, Antioquia · seguimiento ciudadano</span></div>
+    <h1><span data-i18n="hero_t1">Que no sean solo palabras.</span> <em data-i18n="hero_t2">Necesitamos hechos.</em></h1>
+    <p class="hero-sub" id="heroSub"></p>
+    <div class="marcador" id="marcador"></div>
+    <div class="reloj" id="reloj"></div>
+  </div>
+</section>
+
+<div class="cinta"><div class="cinta-in" id="cinta"></div></div>
+
+<main>
+
+<section class="bloque" id="hoy">
+  <div class="cab">
+    <h2 data-i18n="hoy_t">Hoy</h2>
+    <span class="vivo"><i></i><span id="hoyFecha"></span></span>
+  </div>
+  <p class="intro" data-i18n="hoy_i">Lo último sobre el comercio, las obras y la Alcaldía de Caucasia. Se actualiza cada vez que usted entra y el robot trae noticias nuevas cada 30 minutos.</p>
+  <div class="buscador">
+    <input id="q" type="search" data-i18n-ph="buscar_ph" placeholder="Buscar en vivo: carrera primera, alumbrado, impuestos…">
+    <button id="btnBuscar" data-i18n="buscar">Buscar</button>
+  </div>
+  <div class="rapidas" id="rapidas"></div>
+  <div class="estado-busq" id="estadoBusq"></div>
+  <div class="tarjetas" id="hoyLista"></div>
+</section>
+
+<section class="bloque oscuro" id="mesa">
+  <h2 data-i18n="me_t">Lo que se habló en la mesa</h2>
+  <p class="intro" id="meIntro"></p>
+  <div class="temas" id="temas"></div>
+</section>
+
+<section class="bloque" id="compromisos">
+  <h2 data-i18n="co_t">El tablero de compromisos</h2>
+  <p class="intro" data-i18n="co_i">Cada promesa con su responsable, su fecha y su prueba. Mientras no haya acta ni fecha publicada, el compromiso queda en rojo.</p>
+  <div class="semaforo-resumen" id="resumen"></div>
+  <div class="tablero" id="tablero"></div>
+</section>
+
+<section class="bloque gris" id="mitad">
+  <h2 data-i18n="mi_t">Entre todos sacamos la región adelante</h2>
+  <p class="intro" data-i18n="mi_i">La responsabilidad es de dos lados: el gobierno cumple lo que promete y los comerciantes hacemos nuestra parte.</p>
+  <div class="mitades">
+    <div class="mitad gob">
+      <h3 data-i18n="mi_gob">Le toca a la Alcaldía</h3>
+      <ul id="listaGob"></ul>
+    </div>
+    <div class="mitad com">
+      <h3 data-i18n="mi_com">Nos toca a los comerciantes</h3>
+      <ul id="listaCom"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="bloque oscuro" id="obras">
+  <h2 data-i18n="ob_t">Las obras en la vía</h2>
+  <p class="intro" data-i18n="ob_i">Imagen de satélite real de Caucasia. Toque una obra para ver dónde está y qué se sabe de ella.</p>
+  <div class="obras-grid">
+    <div id="mapaSat" class="mapa-sat"></div>
+    <div class="obras" id="listaObras"></div>
+  </div>
+</section>
+
+<section class="bloque" id="lider">
+  <h2 data-i18n="li_t">Una región próspera que puede ser líder</h2>
+  <div class="lider" id="listaLider"></div>
+</section>
+
+<section class="bloque gris" id="linea">
+  <h2 data-i18n="ln_t">Cómo llegamos hasta aquí</h2>
+  <ol class="linea" id="lineaT"></ol>
+</section>
+
+<section class="bloque oscuro" id="videos">
+  <h2 data-i18n="vi_t">Videos reales</h2>
+  <p class="intro" data-i18n="vi_i">Noticias y reportajes en video sobre Caucasia. El robot busca videos nuevos cada 30 minutos.</p>
+  <div class="reproductor" id="reproductor"></div>
+  <div class="videos" id="listaVideos"></div>
+</section>
+
+<section class="bloque" id="voz">
+  <h2 data-i18n="vo_t">Su voz: ¿qué necesita su negocio?</h2>
+  <p class="intro" data-i18n="vo_i">Cuéntenos su problema y su propuesta. Le llega por WhatsApp a Vibras Positivas HM y lo llevamos, con los demás, a la próxima mesa.</p>
+  <form id="formVoz" class="voz">
+    <label><span data-i18n="vo_negocio">Negocio y barrio</span><input name="negocio" required></label>
+    <label><span data-i18n="vo_tema">Tema</span><select name="tema" id="selTema"></select></label>
+    <label class="ancho"><span data-i18n="vo_problema">¿Qué le está pasando?</span><textarea name="problema" rows="3" required></textarea></label>
+    <label class="ancho"><span data-i18n="vo_propuesta">¿Qué propone?</span><textarea name="propuesta" rows="3"></textarea></label>
+    <button class="btn-prim" type="submit" data-i18n="vo_enviar">Enviar por WhatsApp</button>
+  </form>
+</section>
+
+<section class="bloque peticion" id="peticion">
+  <h2 data-i18n="pe_t">Derecho de petición: que nos muestren el acta y las fechas</h2>
+  <p class="intro" data-i18n="pe_i">Llene sus datos y envíe una sola petición a todas las entidades a la vez. La ley les da 15 días hábiles para responder (artículo 23 de la Constitución y Ley 1755 de 2015). Si una entidad no es la competente, debe pasarla a la que sí.</p>
+  <div class="pet-grid">
+    <form id="formPet" class="pet-form">
+      <label><span data-i18n="pe_nombre">Nombre completo</span><input name="nombre" required></label>
+      <label><span data-i18n="pe_cc">Cédula</span><input name="cc" inputmode="numeric" required></label>
+      <label><span data-i18n="pe_negocio">Negocio o empresa (opcional)</span><input name="negocio"></label>
+      <label><span data-i18n="pe_ciudad">Ciudad</span><input name="ciudad" value="Caucasia, Antioquia" required></label>
+      <label><span data-i18n="pe_correo">Su correo para la respuesta</span><input name="correo" type="email" required></label>
+      <label><span data-i18n="pe_tel">Celular (opcional)</span><input name="tel" inputmode="tel"></label>
+      <div class="pet-dest"><span data-i18n="pe_dest">Se envía a</span><ul id="destinos"></ul></div>
+      <div class="pet-botones">
+        <button type="submit" class="btn-prim" data-i18n="pe_enviar">Enviar a todas las entidades</button>
+        <button type="button" id="btnGmail" class="btn-sec" data-i18n="pe_gmail">Abrir en Gmail</button>
+        <button type="button" id="btnCopiar" class="btn-sec" data-i18n="pe_copiar">Copiar texto</button>
+      </div>
+      <p class="mini" data-i18n="pe_nota">La app no guarda sus datos: el correo sale desde su propia cuenta. Revise los correos de las entidades antes de enviar; pueden cambiar.</p>
+    </form>
+    <pre class="pet-texto" id="petTexto"></pre>
+  </div>
+</section>
+
+<section class="bloque" id="fuentes">
+  <h2 data-i18n="fu_t">Todas las noticias</h2>
+  <div class="lista-fuentes" id="todas"></div>
+  <button class="btn-sec centro" id="btnMas" data-i18n="ver_mas">Ver más</button>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div>
+    <b>Vibras Positivas HM</b>
+    <p data-i18n="pie_txt">App ciudadana independiente. No es de la Alcaldía ni de ningún partido. Todo lo que aparece trae su fuente. Hecha en Caucasia para que el comercio y el gobierno caminen con norte.</p>
+    <p>Caucasia, Antioquia · WhatsApp <a href="https://wa.me/573117700431">311 770 0431</a></p>
+  </div>
+  <div class="pie-der">
+    <button class="btn-prim" id="btnCompartir" data-i18n="compartir">Compartir por WhatsApp</button>
+    <p class="mini" id="robotHora"></p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

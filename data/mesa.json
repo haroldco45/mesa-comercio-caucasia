@@ -1,0 +1,340 @@
+{
+ "_como_editar": "Harold: cuando la Alcaldía publique un compromiso, cambie aquí su 'estado' (pendiente, en_marcha, cumplido o incumplido), ponga la 'fecha_meta' (AAAA-MM-DD) y la 'prueba' (enlace al acta, contrato SECOP, foto o noticia). Guarde el archivo en GitHub y la app se actualiza sola.",
+ "inicio_seguimiento": "2026-11-25",
+ "mesa": {
+  "fuente": "Instagram @alcaldiadecaucasia",
+  "url": "https://www.instagram.com/alcaldiadecaucasia/",
+  "es": "La administración municipal, encabezada por el alcalde y el secretario de Hacienda, sostuvo una mesa de trabajo con más de 20 comerciantes y empresarios de Caucasia para escuchar las necesidades del gremio.",
+  "en": "The municipal administration, led by the mayor and the Finance secretary, held a working session with more than 20 merchants and business owners from Caucasia to hear the sector's needs."
+ },
+ "cifras": [
+  {
+   "num": 20,
+   "pre": "+",
+   "es": "comerciantes y empresarios en la mesa",
+   "en": "merchants and business owners at the table"
+  },
+  {
+   "num": 4,
+   "es": "temas clave sobre la mesa",
+   "en": "key issues on the table"
+  },
+  {
+   "num": 0,
+   "id": "publicados",
+   "es": "compromisos con fecha publicados",
+   "en": "commitments with a date published"
+  },
+  {
+   "num": 15,
+   "es": "días hábiles para responder una petición",
+   "en": "business days to answer a petition"
+  }
+ ],
+ "temas": [
+  {
+   "id": "espacio",
+   "es": "Recuperación del espacio público",
+   "en": "Reclaiming public space",
+   "lat": 7.9862,
+   "lng": -75.1975,
+   "texto_es": "Andenes y calles libres para caminar, comprar y descargar mercancía. Pero recuperar el espacio no puede ser solo desalojar: el vendedor informal también es parte del comercio de Caucasia.",
+   "texto_en": "Clear sidewalks and streets for walking, shopping and unloading goods. But reclaiming space can't just mean evictions: street vendors are part of Caucasia's commerce too.",
+   "pedimos_es": [
+    "Plan escrito con zonas y cronograma",
+    "Censo de vendedores informales",
+    "Alternativa de reubicación antes de cualquier operativo"
+   ],
+   "pedimos_en": [
+    "A written plan with zones and a schedule",
+    "A census of street vendors",
+    "A relocation option before any eviction"
+   ],
+   "busca": "espacio público Caucasia"
+  },
+  {
+   "id": "obras",
+   "es": "El impacto de las obras en la vía",
+   "en": "The impact of road works",
+   "lat": 7.9905,
+   "lng": -75.195,
+   "texto_es": "Las obras traen progreso, pero mientras duran espantan clientes y complican el cargue y descargue. El negocio que cierra por una obra eterna no vuelve a abrir.",
+   "texto_en": "Road works bring progress, but while they last they scare away customers and complicate loading and unloading. A shop that closes because of an endless project rarely reopens.",
+   "pedimos_es": [
+    "Fecha de entrega de cada obra",
+    "Plan de manejo de tránsito y accesos a los locales",
+    "Horarios de cargue y descargue durante la obra"
+   ],
+   "pedimos_en": [
+    "A delivery date for each project",
+    "A traffic plan that keeps shops accessible",
+    "Loading and unloading hours during the works"
+   ],
+   "busca": "Caucasia carrera primera obras"
+  },
+  {
+   "id": "alumbrado",
+   "es": "Fortalecer el alumbrado público",
+   "en": "Better street lighting",
+   "lat": 7.983,
+   "lng": -75.2,
+   "texto_es": "Una calle iluminada es una calle segura y un comercio que puede vender de noche. El alumbrado lo pagamos todos en la factura: queremos saber cuánto entra y en qué se invierte.",
+   "texto_en": "A well-lit street is a safe street and a shop that can sell at night. We all pay for street lighting on our bills: we want to know how much comes in and where it goes.",
+   "pedimos_es": [
+    "Mapa de puntos apagados y su arreglo",
+    "Cuánto se recauda y cuánto se invierte",
+    "Luz LED primero en las zonas comerciales"
+   ],
+   "pedimos_en": [
+    "A map of dark spots and their repair",
+    "How much is collected and how much is invested",
+    "LED lighting first in commercial areas"
+   ],
+   "busca": "Caucasia alumbrado público"
+  },
+  {
+   "id": "tributario",
+   "es": "El panorama tributario",
+   "en": "The tax outlook",
+   "lat": 7.987,
+   "lng": -75.1935,
+   "texto_es": "Industria y comercio, avisos y tableros, predial. El comerciante necesita reglas claras y estables, y saber a tiempo si viene un cambio para 2027.",
+   "texto_en": "Business tax (ICA), signage tax, property tax. Merchants need clear, stable rules, and to know in time if anything changes for 2027.",
+   "pedimos_es": [
+    "Saber si hay cambios en tarifas para 2027",
+    "Alivios para negocios golpeados por obras o el paro",
+    "Cuentas claras de lo que se recauda y en qué se usa"
+   ],
+   "pedimos_en": [
+    "To know whether rates change in 2027",
+    "Relief for businesses hit by road works or the strike",
+    "Clear accounts of what is collected and how it is spent"
+   ],
+   "busca": "Caucasia impuesto industria y comercio"
+  }
+ ],
+ "compromisos": [
+  {
+   "id": "acta",
+   "tema": "mesa",
+   "estado": "pendiente",
+   "fecha_meta": "",
+   "prueba": "",
+   "es": "Publicar el acta de la mesa: quiénes fueron, qué se dijo y qué se prometió",
+   "en": "Publish the minutes: who attended, what was said and what was promised",
+   "quien": "Alcaldía de Caucasia"
+  },
+  {
+   "id": "proxima",
+   "tema": "mesa",
+   "estado": "pendiente",
+   "fecha_meta": "",
+   "prueba": "",
+   "es": "Poner fecha a la segunda mesa para revisar avances",
+   "en": "Set a date for a second session to review progress",
+   "quien": "Alcaldía y comerciantes"
+  },
+  {
+   "id": "obras",
+   "tema": "obras",
+   "estado": "en_marcha",
+   "fecha_meta": "",
+   "prueba": "https://noticaribe.co/alcalde-de-caucasia-recorrio-las-obras-que-se-desarrollan-en-la-carrera-primera/",
+   "es": "Obra de la carrera primera: que se publique la fecha de entrega, el valor y el contratista",
+   "en": "Carrera Primera road works: publish the delivery date, cost and contractor",
+   "quien": "Secretaría de Planeación"
+  },
+  {
+   "id": "transito",
+   "tema": "obras",
+   "estado": "pendiente",
+   "fecha_meta": "",
+   "prueba": "",
+   "es": "Plan de accesos y cargue para los negocios afectados por obras",
+   "en": "Access and loading plan for businesses affected by road works",
+   "quien": "Planeación y Tránsito"
+  },
+  {
+   "id": "espacio",
+   "tema": "espacio",
+   "estado": "pendiente",
+   "fecha_meta": "",
+   "prueba": "",
+   "es": "Plan de espacio público con censo y alternativa para los vendedores",
+   "en": "Public-space plan with a census and options for street vendors",
+   "quien": "Secretaría de Gobierno"
+  },
+  {
+   "id": "luz",
+   "tema": "alumbrado",
+   "estado": "pendiente",
+   "fecha_meta": "",
+   "prueba": "",
+   "es": "Plan de alumbrado para las zonas comerciales, con fechas",
+   "en": "Street-lighting plan for commercial areas, with dates",
+   "quien": "Alcaldía de Caucasia"
+  },
+  {
+   "id": "impuestos",
+   "tema": "tributario",
+   "estado": "pendiente",
+   "fecha_meta": "",
+   "prueba": "",
+   "es": "Explicar en público si cambian los impuestos municipales en 2027",
+   "en": "Explain publicly whether municipal taxes change in 2027",
+   "quien": "Secretaría de Hacienda"
+  }
+ ],
+ "comerciantes": [
+  {
+   "es": "Dejar el andén libre: la mercancía va adentro del local",
+   "en": "Keep the sidewalk clear: goods stay inside the shop"
+  },
+  {
+   "es": "Formalizarse y renovar la matrícula mercantil a tiempo",
+   "en": "Register the business and renew it on time"
+  },
+  {
+   "es": "Pagar los impuestos a tiempo y exigir que se vea en obras",
+   "en": "Pay taxes on time and demand to see them turned into works"
+  },
+  {
+   "es": "Iluminar fachadas y vitrinas de noche",
+   "en": "Light up shop fronts and windows at night"
+  },
+  {
+   "es": "Comprar y contratar en Caucasia: que la plata se quede en la región",
+   "en": "Buy and hire locally so money stays in the region"
+  },
+  {
+   "es": "Organizarse como gremio y llevar una sola voz a la mesa",
+   "en": "Organize as a sector and bring one voice to the table"
+  },
+  {
+   "es": "Asistir a la próxima mesa y vigilar que se cumpla",
+   "en": "Attend the next session and watch that promises are kept"
+  }
+ ],
+ "obras": [
+  {
+   "es": "Pavimentación de la carrera primera",
+   "en": "Paving of Carrera Primera",
+   "estado_es": "En obra",
+   "estado_en": "Under way",
+   "lat": 7.9905,
+   "lng": -75.195,
+   "texto_es": "El alcalde recorrió la obra el 10 de noviembre de 2026. Se pavimenta con placa para atender inundaciones y problemas de alcantarillado. La nota no publica plazo, valor ni contratista: eso es lo que pedimos.",
+   "texto_en": "The mayor toured the works on 10 November 2026. The street is being paved to fix flooding and sewer problems. No deadline, cost or contractor was published: that's what we're asking for.",
+   "imagen": "https://noticaribe.co/wp-content/uploads/2026/11/01.png",
+   "fuente": "Noticaribe",
+   "url": "https://noticaribe.co/alcalde-de-caucasia-recorrio-las-obras-que-se-desarrollan-en-la-carrera-primera/"
+  },
+  {
+   "es": "Pavimentación de la calle 33, barrio El Palmar",
+   "en": "Paving of Calle 33, El Palmar",
+   "estado_es": "Anunciada",
+   "estado_en": "Announced",
+   "lat": 7.979,
+   "lng": -75.203,
+   "texto_es": "La Alcaldía anunció la pavimentación de la calle 33 del barrio El Palmar a finales de octubre de 2026.",
+   "texto_en": "The mayor's office announced the paving of Calle 33 in El Palmar in late October 2026.",
+   "imagen": "",
+   "fuente": "Noticaribe",
+   "url": "https://noticaribe.co/alcaldia-anuncia-pavimentacion-de-la-calle-33-del-barrio-el-palmar-de-caucasia-antioquia/"
+  },
+  {
+   "es": "Vía Campo Alegre (Ruta 25) – Nechí",
+   "en": "Campo Alegre (Route 25) – Nechí road",
+   "estado_es": "Arrancó el 19 oct 2026",
+   "estado_en": "Started 19 Oct 2026",
+   "lat": 8.02,
+   "lng": -75.1,
+   "texto_es": "Mejoramiento de 5,4 km por Obras por Impuestos, financiado por siete compañías; beneficiará a cerca de 28.000 personas.",
+   "texto_en": "Upgrade of 5.4 km through the Works-for-Taxes scheme, funded by seven companies; it will benefit about 28,000 people.",
+   "imagen": "",
+   "fuente": "Semana",
+   "url": "https://www.semana.com/economia/capsulas/articulo/obras-por-impuestos-impulsa-mejoramiento-de-corredor-vial-en-el-bajo-cauca/202613/"
+  }
+ ],
+ "linea": [
+  {
+   "f": "2024-01-01",
+   "es": "Jhoan Oderis Montes Cortés asume como alcalde de Caucasia (2024-2027).",
+   "en": "Jhoan Oderis Montes Cortés takes office as mayor of Caucasia (2024-2027).",
+   "url": "https://www.funcionpublica.gov.co/dafpIndexerBHV/hvSigep/detallarHV/S19123-0207-4"
+  },
+  {
+   "f": "2026-03-26",
+   "es": "Fenalco Antioquia rechaza los bloqueos del paro minero en el Bajo Cauca: el comercio quedó como rehén del conflicto.",
+   "en": "Fenalco Antioquia condemns the mining-strike blockades in Bajo Cauca: commerce was held hostage by the conflict.",
+   "url": "https://abceconomia.co/?p=47174"
+  },
+  {
+   "f": "2026-10-19",
+   "es": "Arranca el mejoramiento de la vía Campo Alegre – Nechí por Obras por Impuestos.",
+   "en": "Work begins on the Campo Alegre – Nechí road under Works-for-Taxes.",
+   "url": "https://www.semana.com/economia/capsulas/articulo/obras-por-impuestos-impulsa-mejoramiento-de-corredor-vial-en-el-bajo-cauca/202613/"
+  },
+  {
+   "f": "2026-11-10",
+   "es": "El alcalde recorre la obra de la carrera primera y agradece la paciencia de vecinos y comerciantes.",
+   "en": "The mayor tours the Carrera Primera works and thanks neighbors and merchants for their patience.",
+   "url": "https://noticaribe.co/alcalde-de-caucasia-recorrio-las-obras-que-se-desarrollan-en-la-carrera-primera/"
+  },
+  {
+   "f": "2026-11-24",
+   "es": "La Alcaldía publica en sus redes la mesa de trabajo con más de 20 comerciantes: espacio público, obras, alumbrado e impuestos.",
+   "en": "The mayor's office posts about its working session with 20+ merchants: public space, road works, lighting and taxes.",
+   "url": "https://www.instagram.com/alcaldiadecaucasia/"
+  },
+  {
+   "f": "2026-11-25",
+   "es": "Arranca este seguimiento ciudadano: que no sean solo palabras.",
+   "en": "This citizen tracker starts: not just words.",
+   "url": "https://mesa-comercio-caucasia.netlify.app/"
+  }
+ ],
+ "lider": [
+  {
+   "es": "Puerta entre Antioquia y la Costa",
+   "en": "Gateway between Antioquia and the Caribbean coast",
+   "texto_es": "Por Caucasia pasa la Troncal de Occidente: todo lo que va de Medellín a la Costa cruza nuestro comercio.",
+   "texto_en": "The Western Trunk Road runs through Caucasia: everything moving between Medellín and the coast crosses our commerce."
+  },
+  {
+   "es": "Centro de compras de toda una región",
+   "en": "Shopping hub for a whole region",
+   "texto_es": "Del Bajo Cauca, el sur de Córdoba y el Nordeste vienen a Caucasia a comprar, vender y hacer vueltas.",
+   "texto_en": "People from Bajo Cauca, southern Córdoba and the Northeast come to Caucasia to buy, sell and do business."
+  },
+  {
+   "es": "El río Cauca y la tierra",
+   "en": "The Cauca River and the land",
+   "texto_es": "Ganadería, arroz, pesca y el río: una despensa que puede llegar más lejos con valor agregado.",
+   "texto_en": "Cattle, rice, fishing and the river: a pantry that can reach further with added value."
+  },
+  {
+   "es": "Gente que emprende",
+   "en": "People who build businesses",
+   "texto_es": "Ferias como ExpoCaucasia mostraron decenas de emprendimientos locales listos para crecer.",
+   "texto_en": "Fairs like ExpoCaucasia showcased dozens of local ventures ready to grow."
+  }
+ ],
+ "aliados": [
+  {
+   "n": "Cámara de Comercio de Medellín para Antioquia — Centro Empresarial Bajo Cauca (Caucasia)",
+   "d": "(604) 839 70 30",
+   "url": "https://www.camaramedellin.com.co/"
+  },
+  {
+   "n": "Concejo Municipal de Caucasia",
+   "d": "concejo@caucasia-antioquia.gov.co",
+   "url": ""
+  },
+  {
+   "n": "Personería de Caucasia",
+   "d": "personeria@caucasia-antioquia.gov.co",
+   "url": ""
+  }
+ ]
+}
