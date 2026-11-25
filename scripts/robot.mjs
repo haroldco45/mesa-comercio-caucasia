@@ -28,7 +28,7 @@ const CONSULTAS = [
 ];
 
 const ZONA = /caucasia|bajo cauca/i;
-const RUIDO = /asesin|homicid|sicari|muert[oa]s?\b|cad[aá]ver|captur|balacera|violaci|accidente de tr[aá]nsito/i;
+const RUIDO = /asesin|homicid|sicari|muert[oa]s?\b|cad[aá]ver|captur|balacera|violaci|secuestr|hurt|robo|plan pistola|extorsi|accidente de tr[aá]nsito/i;
 const RELEVANTE = { test: t => ZONA.test(t) && !RUIDO.test(t) };
 
 function limpiar(t = '') {
@@ -170,7 +170,7 @@ async function portada(items) {
           <stop offset="0.25" stop-color="#0a1628" stop-opacity="0.05"/><stop offset="1" stop-color="#0a1628" stop-opacity="0.95"/></linearGradient></defs>
         <rect width="1200" height="630" fill="url(#g)"/>
         <rect x="60" y="440" width="12" height="130" fill="#ffb703"/>
-        <text x="96" y="500" font-family="DejaVu Sans, Arial" font-weight="700" font-size="54" fill="#ffffff">Mesa del Comercio al Día · Caucasia</text>
+        <text x="96" y="500" font-family="DejaVu Sans, Arial" font-weight="700" font-size="48" fill="#ffffff">Mesa del Comercio al Día · Caucasia</text>
         <text x="96" y="556" font-family="DejaVu Sans, Arial" font-size="30" fill="#ffd166">Que no sean solo palabras: necesitamos hechos</text>
         <text x="1140" y="600" text-anchor="end" font-family="DejaVu Sans, Arial" font-size="22" fill="#cfd6e6">Vibras Positivas HM</text>
       </svg>`);
@@ -191,7 +191,7 @@ async function portadaSatelite(sharp) {
     const capa = Buffer.from(`<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
       <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0.2" stop-color="#0a1628" stop-opacity="0.1"/><stop offset="1" stop-color="#0a1628" stop-opacity="0.95"/></linearGradient></defs>
       <rect width="1200" height="630" fill="url(#g)"/><rect x="60" y="440" width="12" height="130" fill="#ffb703"/>
-      <text x="96" y="500" font-family="DejaVu Sans, Arial" font-weight="700" font-size="54" fill="#ffffff">Mesa del Comercio al Día · Caucasia</text>
+      <text x="96" y="500" font-family="DejaVu Sans, Arial" font-weight="700" font-size="48" fill="#ffffff">Mesa del Comercio al Día · Caucasia</text>
       <text x="96" y="556" font-family="DejaVu Sans, Arial" font-size="30" fill="#ffd166">Que no sean solo palabras: necesitamos hechos</text>
       <text x="1140" y="600" text-anchor="end" font-family="DejaVu Sans, Arial" font-size="22" fill="#cfd6e6">Vibras Positivas HM</text></svg>`);
     await sharp(buf).resize(1200, 630, { fit: 'cover' }).composite([{ input: capa }]).jpeg({ quality: 84 }).toFile('portada.jpg');

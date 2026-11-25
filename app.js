@@ -130,7 +130,7 @@ async function cargarTodo() {
 
 /* ---------- Búsqueda en vivo (Google News + Bing por proxies) ---------- */
 const ZONA = /caucasia|bajo cauca/i;
-const RUIDO = /asesin|homicid|sicari|muert[oa]s?\b|cad[aá]ver|captur|balacera|violaci/i;
+const RUIDO = /asesin|homicid|sicari|muert[oa]s?\b|cad[aá]ver|captur|balacera|violaci|secuestr|hurt|robo|plan pistola|extorsi/i;
 const PROXIES = [
   u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
   u => `https://corsproxy.io/?url=${encodeURIComponent(u)}`,

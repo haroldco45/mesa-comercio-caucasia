@@ -19,7 +19,7 @@ function diasDesde(hace) {
   return n * 365; // a, año, y, year
 }
 const RELEVANTE = /caucasia|bajo cauca/i;
-const RUIDO = /asesin|homicid|sicari|captur|balacera/i;
+const RUIDO = /asesin|homicid|sicari|captur|balacera|secuestr|hurt|robo|plan pistola|extorsi/i;
 
 function buscarRenderers(nodo, out) {
   if (!nodo || typeof nodo !== 'object') return;
