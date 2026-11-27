@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T20:54:57.696Z",
+ "actualizado": "2026-11-27T23:24:34.687Z",
  "items": [
   {
    "titulo": "Clima en Caucasia, Antioquia por horas",
@@ -231,6 +231,20 @@
    "fecha": "2026-10-28T07:00:00.000Z",
    "imagen": "",
    "_intentado": true
+  },
+  {
+   "titulo": "Una descarga eléctrica mató a unas 10 reses en Caucasia, Antioquia: gremio de ganaderos pide ayuda tras la pérdida",
+   "url": "https://www.infobae.com/colombia/2026/10/27/una-descarga-electrica-mato-a-unas-10-reses-en-caucasia-antioquia-gremio-de-ganaderos-pide-ayuda-tras-la-perdida/",
+   "fuente": "Infobae",
+   "fecha": "2026-10-27T12:43:00.000Z",
+   "imagen": "https://www.infobae.com/resizer/v2/CRBXD6LSRNFLVIKNQ2UAG2OS2Q.jpg?auth=04bdbe5cf4045b90fbbbbe5685e1d3a78d81e908be5d5799e1c1fc8b9ed58bf5&smart=true&width=1024&height=512&quality=85"
+  },
+  {
+   "titulo": "¡Tragedia en el campo! Un rayo habría matado a 10 reses de pequeños productores en Caucasia, Antioquia",
+   "url": "https://www.minuto30.com/tragedia-en-el-campo-un-rayo-habria-matado-a-10-reses-de-pequenos-productores-en-caucasia-antioquia/1725073/",
+   "fuente": "Minuto30",
+   "fecha": "2026-10-27T10:55:00.000Z",
+   "imagen": "https://staticprd.minuto30.com/wp-content/uploads/2026/10/1-1-reses-caucasia-tormenta.webp"
   },
   {
    "titulo": "En Caucasia, un rayo habría causado la muerte de 10 reses; esto se sabe",
